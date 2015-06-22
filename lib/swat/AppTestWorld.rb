@@ -12,15 +12,17 @@ class AppTestWorld < Swat::TestWorld::Base
   SITUATIONS = {}
 
   def init_situation
-    # implement your situations
+    if @options[:john]
+      User.create(email: 'john.smith@gmail.com', full_name: 'John Smith')
+    end
+
+    if @options[:josh]
+      User.create(email: 'josh.doe@gmail.com', full_name: 'Josh Doe')
+    end
   end
 
-  def before_each(example, context)
-    # do something
-  end
-
-  def after_each(example, context)
-    # do something
+  def some_very_specific_logic
+    puts 'Hello Test Word!'
   end
 
 end
