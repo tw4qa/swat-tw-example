@@ -45,5 +45,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'sw2at-tw', '0.0.3'
 end
 
