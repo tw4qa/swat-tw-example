@@ -90,5 +90,8 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
+require 'sw2at-tw'
+require_relative '../lib/swat/AppTestWorld'
+Swat::TestWorld.setup(config, klass: AppTestWorld)
 
 end
